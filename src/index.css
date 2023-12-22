@@ -30,3 +30,11 @@ body{
   border-top-left-radius:  20px;
   border-top-right-radius: 20px;
 }
+
+.aboutus{
+  background-image: url(./assets/bgSlice.b9d8c29c.svg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
