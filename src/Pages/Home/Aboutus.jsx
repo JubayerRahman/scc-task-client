@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Aboutus = () => {
     const [services, setServices ] = useState([])
@@ -7,9 +9,12 @@ const Aboutus = () => {
         .then(res => res.json())
         .then(data => setServices(data.packages))
     },[])
+    useEffect(() => {
+        Aos.init();
+      }, [])
     console.log(services);
   return (
-    <div>
+    <div data-aos="fade-down">
         <div className='text-white py-[25px] lg:w-[70%] mx-auto p-[10px]'>
       <h1 className='text-2xl'>About us:</h1>
       <p>At SCC, we are at the forefront of revolutionizing task management. With a commitment to streamlining workflows and enhancing productivity, SCC provides innovative solutions that empower individuals and teams to navigate their tasks with unparalleled efficiency. Our cutting-edge technology and user-friendly interfaces create a seamless experience, ensuring that every project, big or small, is handled with precision and ease. Discover a new era of productivity with SCC, where we transform the way you work, one task at a time.</p>

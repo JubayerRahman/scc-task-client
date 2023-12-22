@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import useAxios from '../../Components/Hooks/useAxios/useAxios'
 import Swal from 'sweetalert2'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const TaskList = () => {
   const Axios = useAxios()
   const [tasks, setTasks] = useState([])
+  useEffect(() => {
+    Aos.init();
+  }, [])
+
   useEffect(()=>{
     Axios("/tasks")
     .then(res=> setTasks(res.data))
@@ -40,7 +46,7 @@ const TaskList = () => {
     })
   }
   return (
-    <div>
+    <div data-aos="fade-down">
       {
         tasks?
         <div>

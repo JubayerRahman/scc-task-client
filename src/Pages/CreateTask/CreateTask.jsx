@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useAxios from '../../Components/Hooks/useAxios/useAxios'
 import { data } from 'autoprefixer'
 import Swal from 'sweetalert2'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const CreateTask = () => {
   const Axios = useAxios()
+  useEffect(() => {
+    Aos.init();
+  }, [])
   const formfunction = (e)=>{
     e.preventDefault()
     const title = e.target.title.value
@@ -27,7 +32,7 @@ const CreateTask = () => {
     })
   }
   return (
-    <div onSubmit={formfunction} className=" w-full flex flex-col  items-center">
+    <div data-aos="fade-down" onSubmit={formfunction} className=" w-full flex flex-col  items-center">
       <h1 className='text-xl'>Create a task here</h1>
       <form className=' flex flex-col gap-2 w-[100%] items-center'>
         <input className='text-xl bg-transparent border-2 outline-none p-[10px] w-[80%]' type="text" name="title" placeholder='Task title' id="" />
