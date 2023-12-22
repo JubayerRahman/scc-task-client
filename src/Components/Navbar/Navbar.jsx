@@ -27,7 +27,9 @@ const Navbar = () => {
       <Link to="/">
         <li>Home</li>
       </Link>
-      <li>About us</li>
+      <Link to="/about">
+        <li>About us</li>
+      </Link>
         {
           user?
           <div onClick={submenushow}>

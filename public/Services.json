@@ -1,0 +1,54 @@
+{
+    "service": "SCC Task Management",
+    "packages": [
+      {
+        "name": "Basic Plan",
+        "price": "$9.99/month",
+        "features": [
+          "Intuitive Task Creation and Organization",
+          "Collaborative Workspaces",
+          "User-Friendly Interface",
+          "Mobile Accessibility"
+        ],
+        "additionalFeatures": [],
+        "support": "Standard Support",
+        "trialPeriod": "14 days",
+        "recommendedFor": "Individuals and Small Teams"
+      },
+      {
+        "name": "Standard Plan",
+        "price": "$19.99/month",
+        "features": [
+          "All features from Basic Plan",
+          "Customizable Workflows",
+          "Task Automation",
+          "Integration Capabilities"
+        ],
+        "additionalFeatures": [
+          "Analytics and Insights",
+          "Continuous Updates and Support"
+        ],
+        "support": "Priority Support",
+        "trialPeriod": "30 days",
+        "recommendedFor": "Growing Teams and Businesses"
+      },
+      {
+        "name": "Premium Plan",
+        "price": "$39.99/month",
+        "features": [
+          "All features from Standard Plan",
+          "Dedicated Account Manager",
+          "Advanced Analytics and Reporting",
+          "Priority Access to New Features"
+        ],
+        "additionalFeatures": [
+          "On-Site Training",
+          "24/7 Premium Support"
+        ],
+        "support": "Premium Support",
+        "trialPeriod": "45 days",
+        "recommendedFor": "Enterprises and Large Organizations"
+      }
+    ]
+  }
+  

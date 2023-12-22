@@ -11,6 +11,9 @@ import CreateTask from './Pages/CreateTask/CreateTask.jsx'
 import TaskList from './Pages/TaskList/TaskList.jsx'
 import CompletedTask from './Pages/completedTask/completedTask.jsx'
 import Welcome from './Pages/Welcomepage/Welcome.jsx'
+import Home from './Pages/Home/Home.jsx'
+import PrivateRoute from './PrivetRoute/PrivetRoute.jsx'
+import AboutPage from './Pages/Aboutpage/AboutPage.jsx'
 
 const roots = createBrowserRouter([
   
@@ -18,6 +21,14 @@ const roots = createBrowserRouter([
     path:"/",
     element: <App/>,
     children:[
+      {
+        path:"/",
+        element:<Home/>
+      },
+      {
+        path:"/about",
+        element:<AboutPage/>
+      },
       {
         path:"/login",
         element:<Login/>
@@ -28,23 +39,23 @@ const roots = createBrowserRouter([
       },
       {
         path:"/Dashboard",
-        element:<Dashboard/>,
+        element:<PrivateRoute><Dashboard/></PrivateRoute>,
         children:[
           {
             path:"/Dashboard",
-            element:<Welcome/>
+            element:<PrivateRoute><Welcome/></PrivateRoute>
           },
           {
             path:"/Dashboard/createtask",
-            element:<CreateTask/>
+            element:<PrivateRoute><CreateTask/></PrivateRoute>
           },
           {
             path:"/Dashboard/tasklist",
-            element:<TaskList/>
+            element:<PrivateRoute><TaskList/></PrivateRoute>
           },
           {
             path:"/Dashboard/completedtask",
-            element:<CompletedTask/>
+            element:<PrivateRoute><CompletedTask/></PrivateRoute>
           }
         ]
       }

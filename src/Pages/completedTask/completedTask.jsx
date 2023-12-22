@@ -10,7 +10,7 @@ const CompletedTask = () => {
   },[])
   return (
     <div>
-      <h1>Completed tasks</h1>
+      <h1 className='text-2xl mb-[20px]'>Completed tasks</h1>
       {
         completetasks?
         <div>
